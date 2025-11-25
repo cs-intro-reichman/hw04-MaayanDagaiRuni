@@ -187,11 +187,9 @@ public class ArrCharOps {
         for(int i =0; i < minlength;i++){
             int code1 = str1.charAt(i);
             int code2 = str2.charAt(i);
-            if (code1 >= 65 && code1 <= 90) code1 += 32;
-            if (code2 >= 65 && code2 <= 90) code2 += 32;  
             if (code1 != code2){
                 if(code1 >code2){
-                    return 1;
+                return code1 > code2 ? 1 : -1;
                 }
                 else{
                     return -1;
