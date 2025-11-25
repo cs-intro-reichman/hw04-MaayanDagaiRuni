@@ -183,6 +183,15 @@ public class ArrCharOps {
         if (str1 == null || str2 == null) {
         return -2;  
                 }
+        if(str1.length() < str2.length()){
+            return -1;
+        }
+        if(str1.length() > str2.length()){
+            return 1;
+        }
+        if(str1.length() == str2.length()){
+            return 0;
+        }
         int minlength = Math.min(str1.length(), str2.length());
         for(int i =0; i < minlength;i++){
             int code1 = str1.charAt(i);
@@ -198,14 +207,6 @@ public class ArrCharOps {
                 }
             }
         }
-        if(str1.length() < str2.length()){
-            return -1;
-        }
-        if(str1.length() > str2.length()){
-            return 1;
-        }
-        else{
-            return 0;
-        }
+        return 0;
     }
 }
